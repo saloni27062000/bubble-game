@@ -17,7 +17,7 @@ function App() {
 
   const createBubbles = () => {
     let numList = [];
-    for (let i = 0; i < 90; i++) {
+    for (let i = 0; i < 50; i++) {
       numList.push(Math.floor(Math.random() * 10));
     }
     setBubbles(numList);
