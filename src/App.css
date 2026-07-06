@@ -1,0 +1,88 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.game-wrapper {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bubble Container */
+.bubble-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* 10 bubbles per row */
+    gap: 5px;
+    padding: 10px;
+    justify-items: center;
+}
+
+/* Bubble */
+.bubble {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background: #38dde3;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bubble:hover {
+    transform: scale(1.08);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .bubble-container {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .bubble {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .bubble-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .bubble {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .game-controls {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .game-controls button,
+    .target-box {
+        width: 100%;
+        text-align: center;
+    }
+}
